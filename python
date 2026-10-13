@@ -1,0 +1,35 @@
+#I recreated the google login its simple but cool, my best tell me if u see any
+passtrys = 0
+trys = 0
+logined = True
+while logined:
+    otherslogin = ['nazarbay','xamitchik','anime_lover','hello1']
+    mylogin = input("enter your acc login: ")
+    if len(mylogin) > 5:
+        if mylogin in otherslogin:
+            print("alredy used")
+            trys = trys + 1
+            if trys == 5:
+                print("u try it 5 time in a row")
+                logined = False
+        else:
+            logined = False
+            passed = True
+            while passed:
+                password = input("enter new password:")
+                if len(password) >= 8:
+                    print("succeseful logined")
+                    passed = False
+                else:
+                    print("\nname succeseful")
+                    print("your password letter smaller than 8!\n")
+                    passtrys = passtrys + 1
+                    if passtrys == 5:
+                        print("u try it 5 time in a row")
+                        passed = False
+    else:
+        print("you need more letter than 5!\n")
+        trys = trys + 1
+        if trys == 5:
+            print("u try it 5 time in a row")
+            logined = False
